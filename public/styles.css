@@ -1,0 +1,113 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark gradient background */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.quiz-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    margin: 100px auto0;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.quiz-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+h1 {
+    color: #f39c12; /* Golden title */
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.question {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    background-color: rgba(52, 73, 94, 0.8); /* Darker option backgrounds */
+    color: #fff;
+    padding: 18px 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+}
+
+.options li:hover {
+    background-color: rgba(44, 62, 80, 0.9);
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+button {
+    background-color: #f39c12; /* Golden button */
+    color: #fff;
+    padding: 18px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+    width:80%;
+}
+
+button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.4em;
+    color: #2ecc71; /* Green for success */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.correct {
+    background-color: #27ae60; /* Green for correct answers */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.incorrect {
+    background-color: #e74c3c; /* Red for incorrect answers */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations (Optional) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.quiz-container {
+    animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,8 @@
+CREATE TABLE players (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    level INTEGER DEFAULT 1,
+    experience INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT NOW()
+);
